@@ -58,4 +58,4 @@ error=$(grep "ERROR.*($user)" syslog.log | wc -l)
 echo "$user,$info,$error" >> user_statistic.csv 
 done < tmp2.txt 
 ```
-Yaitu pada saat kemunculan tiap tiap pesan `INFO` atau `ERROR` dihitung jumlah kemunculannya dengan command `wc -l` dan dimasukkan kedalam variabel. Setelah perulangan selesai, kami tampilkan `Username,INFO,ERROR` dengan command `echo "$user,$info,$error""`. Diakhir, kami menyimpan semua `Username,INFO,ERROR` pada file `user_statistic.csv`
+Yaitu pada saat kemunculan tiap tiap pesan `INFO` atau `ERROR` dihitung jumlah kemunculannya dengan command `wc -l` dan dimasukkan kedalam variabel. Setelah perulangan selesai, kami tampilkan `Username,INFO,ERROR` dengan command `echo "$user,$info,$error""`. Diakhir, kami menyimpan semua `Username,INFO,ERROR` pada file `user_statistic.csv`.
